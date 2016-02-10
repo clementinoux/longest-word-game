@@ -1,0 +1,19 @@
+<h1>Players#game</h1>
+
+<p>******** Welcome to the longest word-game !********?</p>
+
+<p>> Avec combien de lettres voulez-vous jouer?</p>
+<form action="/game" method="get">
+  <input type="text" name="grid_size">
+  <input type="submit" value='Search'>
+</form>
+
+<p>> Here is your grid : <%= @grid %> </p>
+
+<p> Quelle est votre proposition ?  </p>
+<form action="/score" method="get">
+  <input type="text" name="attempt">
+  <input type="hidden" name="start_time" value="<%= @start_time %>">
+  <input type="submit" value='Search'>
+</form>
+
